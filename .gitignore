@@ -1,3 +1,4 @@
 .vs*
 __pycache__*
 *.h5
+test*

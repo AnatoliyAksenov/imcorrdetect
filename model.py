@@ -47,4 +47,4 @@ def predict(img_path):
             iii = np.append(iii, col, axis=1)
 
         
-        return iii
+    return iii
