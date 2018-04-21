@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <script>
+        BASE_URL = "";
+        BASE_URL_STATIC = "";
+        var g_user = null;
+    </script>
+
+    <script type="text/javascript">
+        if (typeof Muse == "undefined") window.Muse = {};
+        window.Muse.assets = {
+            "required": ["jquery-1.12.4.js", "museutils.js", "jquery.watch.js", "jquery.musepolyfill.bgsize.js", "webpro.js", "musewpslideshow.js", "jquery.museoverlay.js", "touchswipe.js", "musewpdisclosure.js"/*, "index.css"*/],
+            "outOfDate": []
+        };
+    </script>
+    <!--
+
+        ATTENTION!!!
+
+        ALL RIGHTS REVERSED!
+
+
+    -->
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+    <meta name="description"
+          content="RID /Retouched Image Detector/"/>
+    <title>RID /Retouched Image Detector/ by ValveGrip</title>
+
+    <meta property="og:image" content="/resources/static/open/thumbnail.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="2050">
+    <meta property="og:image:height" content="940">
+
+    <!-- Other scripts -->
+    <script type="text/javascript">
+        document.documentElement.className += ' js';
+    </script>
+    <!--custom head HTML-->
+    <style>
+        .TabbedPanelsContent {
+            padding-bottom: 10px !important
+        }
+    </style>
+
+    <!--HTML Widget code-->
+    <style type="text/css">ul.launchTimer li {
+        display: inline-block;
+        letter-spacing: -0.05em;
+        margin-top: -5px;
+    }
+
+    ul.launchTimer {
+        line-height: 1.2em;
+        text-align: center;
+    }
+
+    ul.launchTimer .days, ul.launchTimer .hours, ul.launchTimer .minutes {
+        margin-right: 0.5em;
+    }</style>
+
+    <link rel="stylesheet" href="/resources/lib/font-awesome-4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.js"></script>
+    <script src="/resources/lib/input/jquery.inputmask.bundle.min.js"></script>
+    <script src="/resources/js/common.js?1500976438"></script>
+    <script src="/resources/js/script.js?1500553042"></script>
+
+    <link href="/resources/lib/atc-style-blue.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+    <link rel="stylesheet" href="/resources/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="/resources/main.css">
+    
+</head>
+<body>
+<main class="container-fluid landing-page">
+    <header id="header" class="row header">
+        <div class="col-xs-12">
+            <div class="row header__head">
+                <div class=" col-xs-12 col-sm-6 col-md-6 text-center header__address">
+                    <p>21 апреля 2018 года</p>
+                    <p>г. Москва</p>
+                </div>
+                <div class="hidden-xs hidden-sm col-md-3 header__head-right clearfix">
+                    <span class="pull-right header__hashtag">#RussianHackers</span>                    
+                </div>
+            </div>
+            <div class="row header__title">
+                <div class="col-xs-12 text-center">
+                    <p class="header__title-text">
+                        RID (Retouched Image Detector)
+                    </p>
+                </div>
+            </div>
+            <div class="row header__text">
+                <div class="col-xs-12 text-center">
+                    <div class="header__text-column">
+                        <p>We fight&nbsp;fraud&nbsp;using AI</p>
+                        <p>Check your images for filters!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row header__buttons">
+                <div class="col-xs-12 text-center">
+                    <a data-toggle="modal" data-target="#contentModal"
+                       class="btn btn-default btn-custom will-load-later loading">
+                        <i class="fa fa-spinner fa-pulse fa-fw"></i> Send Image</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="prize" class="row prize">
+        <div class="col-xs-12 col-md-8 col-md-offset-2 text-center">
+            <h2 class="prize__title">RID story</h2>
+            <p class="prize__text">
+                
+                We analyzed if an image had been processed using Gaussian blur.
+                At stage 1, we used dataset CIFAR-10
+                and split every image into 32*32 pixel squares. 
+                Then we used a convolutional neural network
+                to apply weights to every square, marking
+                non-retouched layers of the squares as '0' and retouched layers as '1', 
+                which is the mod_vgg19 procedure.
+                However, it did not produce the predicted results.</p>
+                <BR />
+                <p class="prize__text">
+                At stage 2 we used another handmade dataset
+                and split images in this set into 64*64 pixel squares.
+                Then we again applied weights to every square.</p></p>
+            <p class="prize__text"></p>
+        </div>
+    </section>
+    <section id="conditions" class="row conditions">
+        <div class="col-xs-12 text-center">
+            <h2 class="conditions__title">CryptoPicture</h2>
+            <div class="conditions__container">
+                <div class="conditions__item">
+                    <div class="conditions__item-container">
+                        <img src="https://content.cryptopicture.com/blocks/5415560/mosaic.png"
+                             class="conditions__item-img">
+                    </div>
+                    <p class="conditions__item-text">CryptoPicture. Choice of professionals and others!</p>
+                </div>
+                <div class="conditions__item">
+                    <div class="conditions__item-container">
+                        <img src="https://content.cryptopicture.com/blocks/5415560/mosaic.png"
+                             class="conditions__item-img">
+                    </div>
+                    <p class="conditions__item-text"><a href="https://cryptopicture.com">About CryptoPicture</a></p>
+                </div>
+                <div class="conditions__item">
+                    <div class="conditions__item-container">
+                        <img src="https://content.cryptopicture.com/blocks/5415560/mosaic.png"
+                             class="conditions__item-img">
+                    </div>
+                    <p class="conditions__item-text">About Blockchain</p>
+                </div>
+                <div class="conditions__item">
+                    <div class="conditions__item-container">
+                        <img src="https://content.cryptopicture.com/blocks/5415560/mosaic.png"
+                             class="conditions__item-img">
+                    </div>
+                    <p class="conditions__item-text">About Crypto Technology</p>
+                </div>
+                <div class="conditions__item">
+                    <div class="conditions__item-container">
+                        <img src="https://content.cryptopicture.com/blocks/5415560/mosaic.png"
+                             class="conditions__item-img">
+                    </div>
+                    <p class="conditions__item-text">About Russian Hackers</p>
+                </div>
+            </div>
+            <div class="row conditions__buttons">
+                <div class="col-xs-12 text-center">
+                    <a href="https://cryptocurrency.com" class="btn btn-default btn-custom will-load-later loading inverse">
+                        <i class="fa fa-spinner fa-pulse fa-fw"></i>Go to CryptoCurrency&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="organizators" class="row organizators">
+        <div class="col-xs-12 text-center">
+            <h2 class="organizators__title">How you can help us</h2>
+            <div class="organizators__info">
+                <div class="organizators__info-logo">
+                    <img src="/resources/question.jpg">
+                </div>
+                <div class="organizators__info-text">
+                    We want to WIN! And we'll WIN!
+                </div>
+            </div>
+            <div class="organizators__diagramms">
+                <ul class="bank-info">
+                    <li class="bank-info__item">
+                        <div class="info-numbers-container">
+                            <p class="info-numbers">20,000</p>
+                        </div>
+
+                        <p class="info-description">images prepared</p>
+                    </li>
+                    <li class="bank-info__item">
+                        <div class="info-numbers-container">
+                            <p class="info-numbers">108 hours</p>
+                        </div>
+
+                        <p class="info-description">coded</p>
+                    </li>
+                    <li class="bank-info__item">
+                        <div class="info-numbers-container">
+                            <p class="info-numbers">3 men</p>
+                        </div>
+
+                        <p class="info-description">our team</p>
+                    </li>
+                    <li class="bank-info__item">
+                        <div class="info-numbers-container">
+                            <p class="info-numbers">122</p>
+                        </div>
+
+                        <p class="info-description">our table</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section id="juri" class="row juri">
+        <div class="col-xs-12 juri__centerer text-center">
+            <h2 class="juri__title">Our Team</h2>
+            <div class="juri__container">
+                <div class="juri__item">
+                    <div class="juri__item-container juri__item-kulik">
+                    </div>
+                    <div class="juri__item-name">
+                        <p class="juri__item-text">Anatoliy A. Aksenov</p>
+                        <p>Team Lead & Data Scientist</p>
+                    </div>
+                </div>
+                <div class="juri__item">
+                    <div class="juri__item-container juri__item-chubakova">
+                    </div>
+                    <div class="juri__item-name">
+                        <p class="juri__item-text">Pavel Volovich</p>
+                        <p>Data Scientist & Always fresh head</p>
+                    </div>
+                </div>
+                <div class="juri__item">
+                    <div class="juri__item-container juri__item-blagirev">
+                    </div>
+                    <div class="juri__item-name">
+                        <p class="juri__item-text">Timur Kafiatullin</p>
+                        <p>Data Scientist & Superman</p>
+                    </div>
+                </div>
+                <div class="juri__item">
+                    <div class="juri__item-container juri__item-logunov">
+                    </div>
+                    <div class="juri__item-name">
+                        <p class="juri__item-text">Bob</p>
+                        <p>Our Team mascot</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="row nooter">
+        <div class="nooter__container">
+            <div class="nooter__row">
+                <div class="nooter__col">
+                    <div class="nooter__copy visible-xs">
+                        <p>© 2018 ValveGRIP</p>
+                        <p>SuperTeam for any project</p>
+                    </div>
+                </div>
+            </div>
+            <div class="nooter__row">
+                <div class="nooter__col">
+                    <div class="nooter__copy hidden-xs">
+                        <p>© 2018 ValveGRIP</p>
+                        <p>SuperTeam for any project</p>
+                    </div>
+                    <div class="nooter__email nooter__text">
+                        <a class="nooter__email-link" href="mailto:anatoliy@aksenov.org">anatoliy@aksenov.org</a>
+                    </div>
+                    <p><a href="https://cryptocurrency.com">CryptoCurrency.com</a></p>
+                    
+                </div>
+                <div class="nooter__col">
+                    &nbsp;
+                </div>
+                <div class="nooter__col">
+                    <div class="nooter__item-link"><a href="#header">RID your image</a></div>
+                    <div class="nooter__item-link"><a href="#prize">RID story</a></div>
+                    <div class="nooter__item-link"><a href="#conditions">CryptoPicture</a></div>
+                    <div class="nooter__item-link"><a href="#organizators">How you can help us</a></div>
+                    <div class="nooter__item-link"><a href="#juri">Our Team</a></div>
+                </div>
+                <div class="nooter__col">
+                <span class="ya-share2 share__block"
+                      data-services="facebook,vkontakte,twitter,linkedin"></span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+
+<script src="/resources/lib/moment.min.js"></script>
+<script src="/resources/lib/bootstrap.min.js"></script>
+<script src="/resources/lib/plugins.js?1499855482"></script>
+
+<div class="modal fade" id="contentModal" tabindex="-1" role="dialog" aria-labelledby="contentModal" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-head">
+                <div class="row">
+                    <div class="col-lg-12" style="display: none;">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    </div>
+                    <h2>Регистрация</h2>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid modal-benefits">
+                    <script src="/resources/lib/jquery.maskedinput.min.js"></script>
+<script src="/resources/lib/smoother.js"></script>
+<script src="/resources/lib/WebPhotoMaker/WebPhotoMaker.js?1499855482"></script>
+<script src="/resources/js/inputCamera.js?1499855482"></script>
+<script src="/resources/js/streamCamera.js?1499855482"></script>
+<script src="/resources/js/photoBooth.js?1499855482"></script>
+<script src="/resources/js/auth-flow.js?1499855482"></script>
+
+<div id="fullpage" class="login-wrapper">
+    <div class="section">
+        <div class="slide wizardPage regWizard name registerForm form">
+            <div class="slide-content">
+                Регистрируясь, Вы подтверждаете свое согласие на&nbsp;обработку Ваших персональных данных,
+                в&nbsp;частности, на&nbsp;отправку фото для&nbsp;идентификации при&nbsp;входе на&nbsp;мероприятие.
+                <hr class="gap"/>
+                <input name="firstName" type="text" placeholder="Ваше имя"/><br/>
+                <input name="lastName" type="text" placeholder="Фамилия"/>
+
+                <div class="valueConfirmation">
+    <input name="email" type="text" class="valueInput" placeholder="E-Mail" />
+    <div class="value-confirm-parts">
+        <div class="valueConfirm part-enter-value">
+            <button class="btn btn-custom btn-custom__calendar submit" type="button">
+                Подтвердить E-Mail            </button>
+        </div>
+        <div class="valueConfirm part-enter-code collapsed">
+            <input name="emailConfirmationCode" type="text" placeholder="Код из E-Mail" />
+            <div class="code-retry-block">
+                <div class="countdown-label">
+                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
+                </div>
+                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
+            </div>
+            <hr class="gap"/>
+            <button class="btn btn-custom btn-custom-success inverse-green submit">
+                Зарегистрироваться            </button>
+        </div>
+    </div>
+</div>
+                <hr class="gap"/>
+                <a class="link toLogin">Уже зарегистрированы?</a>
+            </div>
+        </div>
+
+        <div class="slide wizardPage regWizard registerPhoto">
+            На входе мы узнаем Вас в лицо! <br/> Нажмите, чтобы сделать или загрузить фото:
+            <div class="photoHolder"></div>
+        </div>
+        <div class="slide wizardPage regWizard registerDone">
+            Поздравляем, Вы зарегистрированы!<br/>
+        </div>
+
+
+        <div class="slide wizardPage loginWizard loginPhoto">
+            <div class="slide-content">
+                Нажмите, чтобы войти по фото:
+                <div class="photoHolder">
+                    <div class="photo-view-container">
+    <div class="photo-view">
+        <video class="captured capturedVideo" width="640" height="480" preload="auto" loop></video>
+        <img class="captured captured-photo hidden" width="640" height="480" src=""/>
+        <canvas class="captured capturedOverlay" width="640" height="480"></canvas>
+    </div>
+
+    <div class="zero-size">
+        <input class="imagePhotoInput" type="file" accept="video/*;capture=camcorder"/>
+    </div>
+    <canvas class="best-shot" width=180 height=240></canvas>
+</div>                </div>
+                <!--
+                <button class="btn btn-custom btn-custom__calendar loginByPhone">Войти по номеру телефона</button>
+                -->
+                <button class="btn btn-custom btn-custom__calendar loginByEmail">Войти по E-Mail</button>
+                <hr class="gap"/>
+                <a class="toRegister link">Зарегистрироваться</a>
+            </div>
+        </div>
+
+        <div class="slide wizardPage loginWizard loginPhone form">
+            <div class="valueConfirmation">
+    <input name="phone" type="text" class="valueInput" placeholder="Телефон" />
+    <div class="value-confirm-parts">
+        <div class="valueConfirm part-enter-value">
+            <button class="btn btn-custom btn-custom__calendar submit" type="button">
+                Подтвердить телефон            </button>
+        </div>
+        <div class="valueConfirm part-enter-code collapsed">
+            <input name="phoneConfirmationCode" type="text" placeholder="Код из SMS" />
+            <div class="code-retry-block">
+                <div class="countdown-label">
+                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
+                </div>
+                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
+            </div>
+            <hr class="gap"/>
+            <button class="btn btn-custom btn-custom-success inverse-green submit">
+                Подтвердить телефон            </button>
+        </div>
+    </div>
+</div>            <hr class="gap"/>
+            <a class="link loginByPhoto">Войти по фото</a>
+        </div>
+
+        <div class="slide wizardPage loginWizard loginEmail form">
+            <div class="valueConfirmation">
+    <input name="email" type="text" class="valueInput" placeholder="E-Mail" />
+    <div class="value-confirm-parts">
+        <div class="valueConfirm part-enter-value">
+            <button class="btn btn-custom btn-custom__calendar submit" type="button">
+                Подтвердить E-Mail            </button>
+        </div>
+        <div class="valueConfirm part-enter-code collapsed">
+            <input name="emailConfirmationCode" type="text" placeholder="Код из E-Mail" />
+            <div class="code-retry-block">
+                <div class="countdown-label">
+                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
+                </div>
+                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
+            </div>
+            <hr class="gap"/>
+            <button class="btn btn-custom btn-custom-success inverse-green submit">
+                Подтвердить E-Mail            </button>
+        </div>
+    </div>
+</div>            <hr class="gap"/>
+            <a class="link loginByPhoto">Войти по фото</a>
+        </div>
+
+        <div class="slide wizardPage loginWizard loginDone">
+            <h2>Привет, <span class="username"></span>!</h2>
+            <hr class="gap"/>
+        </div>
+        
+        <footer class="logos">
+            <div class="logo logo-openbank"></div>
+            <div class="logo logo-opendev"></div>
+        </footer>
+
+    </div>
+</div>                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="/resources/lib/load-image.all.min.js"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPKRRSK" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+</body>
+</html>
