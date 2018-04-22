@@ -75,7 +75,6 @@
     <link href="/resources/lib/atc-style-blue.css" rel="stylesheet" type="text/css">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
-    <link rel="stylesheet" href="/resources/lib/bootstrap.min.css">
     <link rel="stylesheet" href="/resources/main.css">
     
 </head>
@@ -110,7 +109,7 @@
             <div class="row header__buttons">
                 <div class="col-xs-12 text-center">
                     <a data-toggle="modal" data-target="#contentModal"
-                       class="btn btn-default btn-custom will-load-later loading">
+                       class="btn btn-default btn-custom">
                         <i class="fa fa-spinner fa-pulse fa-fw"></i> Send Image</a>
                 </div>
             </div>
@@ -312,6 +311,7 @@
 
 <script src="/resources/lib/moment.min.js"></script>
 <script src="/resources/lib/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
 <script src="/resources/lib/plugins.js?1499855482"></script>
 
 <div class="modal fade" id="contentModal" tabindex="-1" role="dialog" aria-labelledby="contentModal" aria-hidden="true">
@@ -322,7 +322,7 @@
                     <div class="col-lg-12" style="display: none;">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
-                    <h2>Регистрация</h2>
+                    <h2>RID in use</h2>
                 </div>
             </div>
             <div class="modal-body">
@@ -339,124 +339,15 @@
     <div class="section">
         <div class="slide wizardPage regWizard name registerForm form">
             <div class="slide-content">
-                Регистрируясь, Вы подтверждаете свое согласие на&nbsp;обработку Ваших персональных данных,
-                в&nbsp;частности, на&nbsp;отправку фото для&nbsp;идентификации при&nbsp;входе на&nbsp;мероприятие.
+                Select your image here:
                 <hr class="gap"/>
-                <input name="firstName" type="text" placeholder="Ваше имя"/><br/>
-                <input name="lastName" type="text" placeholder="Фамилия"/>
-
-                <div class="valueConfirmation">
-    <input name="email" type="text" class="valueInput" placeholder="E-Mail" />
-    <div class="value-confirm-parts">
-        <div class="valueConfirm part-enter-value">
-            <button class="btn btn-custom btn-custom__calendar submit" type="button">
-                Подтвердить E-Mail            </button>
-        </div>
-        <div class="valueConfirm part-enter-code collapsed">
-            <input name="emailConfirmationCode" type="text" placeholder="Код из E-Mail" />
-            <div class="code-retry-block">
-                <div class="countdown-label">
-                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
-                </div>
-                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
-            </div>
-            <hr class="gap"/>
-            <button class="btn btn-custom btn-custom-success inverse-green submit">
-                Зарегистрироваться            </button>
-        </div>
-    </div>
-</div>
-                <hr class="gap"/>
-                <a class="link toLogin">Уже зарегистрированы?</a>
-            </div>
-        </div>
-
-        <div class="slide wizardPage regWizard registerPhoto">
-            На входе мы узнаем Вас в лицо! <br/> Нажмите, чтобы сделать или загрузить фото:
-            <div class="photoHolder"></div>
-        </div>
-        <div class="slide wizardPage regWizard registerDone">
-            Поздравляем, Вы зарегистрированы!<br/>
-        </div>
-
-
-        <div class="slide wizardPage loginWizard loginPhoto">
-            <div class="slide-content">
-                Нажмите, чтобы войти по фото:
-                <div class="photoHolder">
-                    <div class="photo-view-container">
-    <div class="photo-view">
-        <video class="captured capturedVideo" width="640" height="480" preload="auto" loop></video>
-        <img class="captured captured-photo hidden" width="640" height="480" src=""/>
-        <canvas class="captured capturedOverlay" width="640" height="480"></canvas>
-    </div>
-
-    <div class="zero-size">
-        <input class="imagePhotoInput" type="file" accept="video/*;capture=camcorder"/>
-    </div>
-    <canvas class="best-shot" width=180 height=240></canvas>
-</div>                </div>
-                <!--
-                <button class="btn btn-custom btn-custom__calendar loginByPhone">Войти по номеру телефона</button>
-                -->
-                <button class="btn btn-custom btn-custom__calendar loginByEmail">Войти по E-Mail</button>
-                <hr class="gap"/>
-                <a class="toRegister link">Зарегистрироваться</a>
-            </div>
-        </div>
-
-        <div class="slide wizardPage loginWizard loginPhone form">
-            <div class="valueConfirmation">
-    <input name="phone" type="text" class="valueInput" placeholder="Телефон" />
-    <div class="value-confirm-parts">
-        <div class="valueConfirm part-enter-value">
-            <button class="btn btn-custom btn-custom__calendar submit" type="button">
-                Подтвердить телефон            </button>
-        </div>
-        <div class="valueConfirm part-enter-code collapsed">
-            <input name="phoneConfirmationCode" type="text" placeholder="Код из SMS" />
-            <div class="code-retry-block">
-                <div class="countdown-label">
-                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
-                </div>
-                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
-            </div>
-            <hr class="gap"/>
-            <button class="btn btn-custom btn-custom-success inverse-green submit">
-                Подтвердить телефон            </button>
-        </div>
-    </div>
-</div>            <hr class="gap"/>
-            <a class="link loginByPhoto">Войти по фото</a>
-        </div>
-
-        <div class="slide wizardPage loginWizard loginEmail form">
-            <div class="valueConfirmation">
-    <input name="email" type="text" class="valueInput" placeholder="E-Mail" />
-    <div class="value-confirm-parts">
-        <div class="valueConfirm part-enter-value">
-            <button class="btn btn-custom btn-custom__calendar submit" type="button">
-                Подтвердить E-Mail            </button>
-        </div>
-        <div class="valueConfirm part-enter-code collapsed">
-            <input name="emailConfirmationCode" type="text" placeholder="Код из E-Mail" />
-            <div class="code-retry-block">
-                <div class="countdown-label">
-                    Повторная отправка возможна через <span class="countdownValue">--</span> с.
-                </div>
-                <button type="button" class="btn btn-custom inverse resendConfirmationCode">Отправить повторно</button>
-            </div>
-            <hr class="gap"/>
-            <button class="btn btn-custom btn-custom-success inverse-green submit">
-                Подтвердить E-Mail            </button>
-        </div>
-    </div>
-</div>            <hr class="gap"/>
-            <a class="link loginByPhoto">Войти по фото</a>
-        </div>
+                <form enctype="multipart/form-data" action="/api/predict" method="post">
+                    <input name="file" type="file" placeholder="file"/><br/>
+                    <button type="submit" class="btn btn-custom">Отправить повторно</button>
+                </form>
 
         <div class="slide wizardPage loginWizard loginDone">
-            <h2>Привет, <span class="username"></span>!</h2>
+            <h2>Results:<span class="results"></span></h2>
             <hr class="gap"/>
         </div>
         
@@ -472,11 +363,6 @@
     </div>
 </div>
 <script src="/resources/lib/load-image.all.min.js"></script>
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KPKRRSK" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+
 </body>
 </html>

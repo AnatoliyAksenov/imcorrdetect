@@ -18,16 +18,18 @@ def index():
 
 @app.route('/api/predict', methods=['GET','POST'])
 def post():
-    #imgfile = tempfile.NamedTemporaryFile(delete=False)
-    #imgfile.write(base64.b64decode(request.json['file'])) 
-    #imgfile.close()
-    #image_binary = model.predict(imgfile.name)
-    image_binary = model.predict('buzova.jpg')
+    # imgfile = tempfile.NamedTemporaryFile(delete=False)
+    # imgfile.write(request.files['file']) 
+    # imgfile.close()
+    f = request.files['file']
+    f.save('temp.bin')
+    image_binary = model.predict('temp.bin')
+
+    # image_binary = model.predict(imgfile.name)
+    # image_binary = model.predict('buzova.jpg')
 
     fff = io.BytesIO()
     img = Image.fromarray(image_binary)
-
-    img.save('test.png', 'PNG')
 
     img.save(fff, 'PNG')
     fff.seek(0)
